@@ -144,12 +144,12 @@
         "source": "/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/res/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/res/merged/androidTest/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png",
-        "source": "/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/res/merged/androidTest/debug/drawable-hdpi/abc_list_pressed_holo_light.9.png",
         "source": "/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/res/drawable-hdpi/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/res/merged/androidTest/debug/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/res/merged/androidTest/debug/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",

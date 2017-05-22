@@ -2,9 +2,5 @@
     {
         "merged": "/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/res/merged/debug/xml/preferences.xml",
         "source": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/bundles/default/res/xml/preferences.xml"
-    },
-    {
-        "merged": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/app/build/intermediates/exploded-aar/artoolkit-android-studio-example/base/unspecified/res/xml/preferences.xml"
     }
 ]
