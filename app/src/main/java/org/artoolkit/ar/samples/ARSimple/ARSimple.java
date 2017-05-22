@@ -52,11 +52,17 @@ package org.artoolkit.ar.samples.ARSimple;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.renderscript.Matrix4f;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -65,10 +71,14 @@ import org.artoolkit.ar.base.ARActivity;
 import org.artoolkit.ar.base.rendering.ARRenderer;
 import org.artoolkit.ar.samples.R;
 
+import java.util.Arrays;
+
 /**
  * A very simple example of extending ARActivity to create a new AR application.
  */
-public class ARSimple extends ARActivity {
+public class ARSimple extends ARActivity implements SensorEventListener {
+	private SensorManager sensorManager;
+	public static float[] mRotationMatrix = new float[16];
 
 
 	private static final int MY_PERMISSIONS_REQUEST_CAMERA = 133;
@@ -87,6 +97,13 @@ public class ARSimple extends ARActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);      
 		setContentView(R.layout.main);
+
+		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+		mRotationMatrix[ 0] = 1;
+		mRotationMatrix[ 4] = 1;
+		mRotationMatrix[ 8] = 1;
+		mRotationMatrix[12] = 1;
+
 
 		mainLayout = (FrameLayout)this.findViewById(R.id.mainLayout);
 
@@ -112,6 +129,23 @@ public class ARSimple extends ARActivity {
 
         });
 	}
+
+
+	@Override
+	public void onResume() {
+		sensorManager.registerListener(this,
+				sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR),
+				SensorManager.SENSOR_DELAY_NORMAL);
+		super.onResume();
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		sensorManager.unregisterListener(this);
+	}
+
+
 
 	/**
 	 * Provide our own SimpleRenderer.
@@ -150,14 +184,41 @@ public class ARSimple extends ARActivity {
 				grantResults[1] == PackageManager.PERMISSION_GRANTED){
 					TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
 					deviceId = telephonyManager.getDeviceId();
-
 					Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show();
 				}
-
 				else
 					Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
 				return;
 			}
 		}
+	}
+
+
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		// we received a sensor event. it is a good practice to check
+		// that we received the proper event
+		if (event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
+			// convert the rotation-vector to a 4x4 matrix. the matrix
+			// is interpreted by Open GL as the inverse of the
+			// rotation-vector, which is what we want.
+			SensorManager.getRotationMatrixFromVector(
+					mRotationMatrix , event.values);
+//			Log.d("raw sensor", " " + mRotationMatrix.length + " " + Arrays.toString(mRotationMatrix) );
+//			Matrix4f tmp = new Matrix4f(mRotationMatrix);
+//			tmp.inverse();
+//			Log.d("GAP", "" + mRotationMatrix.length + " " + Arrays.toString(tmp.getArray()) );
+//			tmp.multiply(tmp);
+//			simpleRenderer.inertialmatrix = tmp;
+//			for (int i =0; i < mRotationMatrix.length; i++) {
+//				simpleRenderer.inertialm[i] = mRotationMatrix[i];
+//			}
+//			Log.d("simplerender: ", " " + simpleRenderer.inertialm.length + " " + Arrays.toString(simpleRenderer.inertialm) );
+		}
+	}
+
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int i) {
+
 	}
 }

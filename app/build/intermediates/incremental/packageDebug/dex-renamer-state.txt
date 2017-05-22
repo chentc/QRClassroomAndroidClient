@@ -1,0 +1,7 @@
+#Sun May 21 21:50:20 EDT 2017
+base.0=/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_89510297227163d54a22fceae4fe09e2ff45ebf1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9a847aab0f84d8f3ec43cc417057e2623cc63490/classes.dex
+base.1=/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9a847aab0f84d8f3ec43cc417057e2623cc63490
+file.0=/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_89510297227163d54a22fceae4fe09e2ff45ebf1/classes.dex

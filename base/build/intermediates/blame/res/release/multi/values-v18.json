@@ -1,5 +1,29 @@
 [
     {
+        "outputFile": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v18/values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/res/values-v18/values-v18.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 48,
+                        "endOffset": 273
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/base/build/intermediates/res/merged/release/values-v18/values-v18.xml",
         "map": [
             {

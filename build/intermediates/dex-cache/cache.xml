@@ -1,2 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/.android/build-cache/05ed5b86ab8e84f74261949aac90ae5769a222a7/output/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_7025553b7f930121e741196ec0a27d55970c1441/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_991b4e971b601ded4d5b6d3f423083e2c0ce403d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/.android/build-cache/05ed5b86ab8e84f74261949aac90ae5769a222a7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eed583c059968ce21b891530bfb882041446818a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_89510297227163d54a22fceae4fe09e2ff45ebf1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_5a61c52070d41ad378e1ebefe40af987512be855/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="502968ed68c9e6fd593099cdfa7e9b25b2c9905f">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9a847aab0f84d8f3ec43cc417057e2623cc63490/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/haojian/.gradle/caches/modules-2/files-2.1/javax.vecmath/vecmath/1.5.2/fd17bc3e67f909573dfc039d8e2abecf407c4e27/vecmath-1.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fd17bc3e67f909573dfc039d8e2abecf407c4e27">
+        <dex dex="/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/transforms/dex/debug/folders/1000/10/vecmath-1.5.2_9d23764bc628dc3f2e5744bca0efe967c8d509bf/classes.dex" />
+    </item>
+
+</items>

@@ -152,6 +152,10 @@
         "source": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "/Users/haojian/projects/QRClassroomAndroidClient/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/settings.png",
+        "source": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/bundles/default/res/drawable-mdpi-v4/settings.png"
+    },
+    {
         "merged": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_focused_holo.9.png",
         "source": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_list_focused_holo.9.png"
     },

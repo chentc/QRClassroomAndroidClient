@@ -1,5 +1,29 @@
 [
     {
+        "outputFile": "/Users/haojian/projects/QRClassroomAndroidClient/base/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w500dp-v13/values-w500dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 54,
+                    "endOffset": 105
+                },
+                "from": {
+                    "file": "/Users/haojian/.android/build-cache/a7a52304a01cc598f38368d66f36799b0a923b62/output/res/values-w500dp/values-w500dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 232,
+                        "endColumn": 54,
+                        "endOffset": 282
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/Users/fanglinchen/Documents/artoolkit-android-studio-example/base/build/intermediates/res/merged/debug/values-w500dp-v13/values-w500dp-v13.xml",
         "map": [
             {

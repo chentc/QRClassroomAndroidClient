@@ -49,7 +49,12 @@
 
 package org.artoolkit.ar.samples.ARSimple;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.AsyncTask;
+import android.renderscript.Matrix4f;
 import android.util.Log;
 
 import org.apache.http.HttpResponse;
@@ -71,11 +76,15 @@ import java.util.List;
 import javax.microedition.khronos.opengles.GL10;
 
 import static org.artoolkit.ar.samples.ARSimple.ARSimple.deviceId;
+import static org.artoolkit.ar.samples.ARSimple.ARSimple.mRotationMatrix;
+
 
 /**
  * A very simple Renderer that adds a marker and draws a cube on it.
  */
 public class SimpleRenderer extends ARRenderer {
+
+//	public float[] inertialm = new float[16];
 
 	private int markerID = -1;
 
@@ -92,8 +101,8 @@ public class SimpleRenderer extends ARRenderer {
 		if (markerID < 0) return false;
 
 		return true;
-
 	}
+
 
 	private class PostTask extends AsyncTask<String, String, Void> {
 		@Override
@@ -140,17 +149,27 @@ public class SimpleRenderer extends ARRenderer {
 		if (ARToolKit.getInstance().queryMarkerVisible(markerID)) {
 
 			gl.glLoadMatrixf(ARToolKit.getInstance().queryMarkerTransformation(markerID), 0);
+
 			float[] markerTransformation = ARToolKit.getInstance().queryMarkerTransformation(markerID);
 
+			Matrix4f img_matrix = new Matrix4f(markerTransformation);
 
-			float x = markerTransformation[12]/10;
-			float y = markerTransformation[13]/10;
-			float z = markerTransformation[14]/10;
+			Matrix4f res_matrix = new Matrix4f(mRotationMatrix);
+			img_matrix.inverse();
+			img_matrix.multiply(res_matrix);
+			Log.d("GAP", "" + img_matrix.getArray().length + " " + Arrays.toString(img_matrix.getArray()) );
+			float [] new_matrix = img_matrix.getArray();
+			float x = new_matrix[12]/10;
+			float y = new_matrix[13]/10;
+			float z = new_matrix[14]/10;
+//			float x = markerTransformation[12]/10;
+//			float y = markerTransformation[13]/10;
+//			float z = markerTransformation[14]/10;
 			Log.e("matrix", Arrays.toString(markerTransformation)+"");
 			String data = x+","+y+","+z + ","+deviceId;
 
 
-			if(System.currentTimeMillis()-postedTimestamp>1000){
+			if(System.currentTimeMillis()-postedTimestamp>100){
 				Log.e("data",data);
 				new PostTask().execute(data);
 				postedTimestamp = System.currentTimeMillis();
